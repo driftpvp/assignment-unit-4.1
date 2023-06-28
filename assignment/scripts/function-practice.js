@@ -6,7 +6,8 @@ console.log('***** Function Practice *****');
 
 // 1. Function to return 'Hello World!'
 function hello() {
-  return 'Hello World!';
+  let greeting = "Hello World!"
+  return greeting;
 }
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
@@ -14,31 +15,57 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName(name) {
-  return;
+function helloName( name ) {
+  console.log( 'in helloName ' );
+  let personalizedName = 'Declan';
+  return personalizedName;
 }
+console.log( ' Hello, ', helloName() );
 // Remember to call the function to test
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+// function addNumbers() {
+//   console.log( 'in addNumbers ' );
+//   let a = 3;
+//   let b = 6;
+//   let maths = a + b;
+//   return maths;
+// }
+// console.log( ' running addNumbers:', addNumbers());
+
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  console.log( 'in addNumbers: ', firstNumber, secondNumber );
+  let maths = firstNumber + secondNumber;
+  return maths;
 }
+console.log( ' running addNumbers:', addNumbers( 3, 6 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
+// function multiplyThree() {
+//  console.log( 'in multiplyThree ');
+//  let answer = 3 * 4 * 5;
+//  return answer;
+// } // end multiplyThree
+// console.log( ' running multiplyThree:', multiplyThree() );
 
-}
+function multiplyThree(firstMultiple, secondMultiple, thirdMultiple) {
+  console.log( 'in multiplyThree: ', firstMultiple, secondMultiple, thirdMultiple);
+  let multiplier = firstMultiple * secondMultiple * thirdMultiple;
+  return multiplier;
+ } // end multiplyThree
+ console.log( ' running multiplyThree:', multiplyThree( 3, 4, 5) );
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
+    return true;
+  }else (number <= 0)
+  return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -49,16 +76,38 @@ console.log('isPositive - should say false', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {
 
+let passengers = [];
+function getLast( nameOfPassangers) {
+  console.log( 'in getLast ', nameOfPassangers );
+  passengers.push( nameOfPassangers );
+  //return passengers;
+  return passengers;
 }
+//console.log( 'array empty - should say undefined', getLast());
+getLast( ' Lucas ');
+getLast( ' Kara ');
+getLast( ' Declan ');
+getLast( ' Keating ');
+getLast( ' Callahan ');
+//console.log( 'array full - should give five names', getLast());
+console.log( 'array full - should return final passanger', getLast(passengers[passengers.length -1]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
-
+function find(i, passengers) {
+  console.log( ' in find array ', i, passengers);
+ for (let i = 0; i < passengers.length; i++) {
+  const element = passengers[i];}{
+  if (passengers[i] === ' Declan ') {
+     return true
+  } else {
+     return false
+  }
+ }
 }
+console.log( 'array value Declan found - should be true', find(passengers));
 
 // ----------------------
 // Stretch Goals
