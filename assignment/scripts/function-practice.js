@@ -17,7 +17,7 @@ console.log('Test - should say "Hello World!"', hello());
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
   console.log( 'in helloName ' );
-  let personalizedName = 'Declan';
+  let personalizedName = 'Hello, Your Name!';
   return personalizedName;
 }
 console.log( ' Hello, ', helloName() );
@@ -77,37 +77,48 @@ console.log('isPositive - should say false', isPositive(-3));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-let passengers = [];
-function getLast( nameOfPassangers) {
-  console.log( 'in getLast ', nameOfPassangers );
-  passengers.push( nameOfPassangers );
+let passengers = ['Lucas', 'Kara', 'Declan', 'Keating', 'Callahan'];
+function getLast( passengers) {
+  let nameOfLastPassenger = passengers[passengers.length -1]
+  console.log( 'in getLast ', nameOfLastPassenger );
   //return passengers;
-  return passengers;
+  return nameOfLastPassenger;
 }
 //console.log( 'array empty - should say undefined', getLast());
-getLast( ' Lucas ');
-getLast( ' Kara ');
-getLast( ' Declan ');
-getLast( ' Keating ');
-getLast( ' Callahan ');
+// getLast( ' Lucas ');
+// getLast( ' Kara ');
+// getLast( ' Declan ');
+// getLast( ' Keating ');
+// getLast( ' Callahan ');
 //console.log( 'array full - should give five names', getLast());
-console.log( 'array full - should return final passanger', getLast(passengers[passengers.length -1]));
+//console.log( 'array full - should return final passanger', getLast(passengers[passengers.length -1]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(i, passengers) {
-  console.log( ' in find array ', i, passengers);
- for (let i = 0; i < passengers.length; i++) {
-  const element = passengers[i];}{
-  if (passengers[i] === ' Declan ') {
-     return true
-  } else {
-     return false
-  }
- }
+
+// function find(passengers, value) {
+//   console.log( ' in find array ', value, passengers);
+//  for (let i = 0; i < passengers.length; i++) {
+//   const element = passengers[i];
+//   if (passengers[i] === value) {
+//      return true
+//   } else {
+//      return false
+//   }
+//  }
+// }
+
+function find (value, passangers) {
+  for(let item of passangers) {
+    console.log(value, item);
+    if(value === item) {
+      return true;
+    } else {
+    }
+  } return false;
 }
-console.log( 'array value Declan found - should be true', find(passengers));
+console.log( 'array value Declan found - should be true', find('Declan', passengers));
 
 // ----------------------
 // Stretch Goals
